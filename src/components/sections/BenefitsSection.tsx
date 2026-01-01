@@ -1,5 +1,5 @@
 import { useEffect } from "react"
-import { Zap, Star, } from "lucide-react"
+import { Zap, Star, CheckCircle, HardDrive } from "lucide-react"
 
 export default function BenefitsSection() {
   useEffect(() => {
@@ -36,13 +36,13 @@ export default function BenefitsSection() {
             <p className="text-sm text-muted-foreground text-pretty">Te decimos la posta, sin vueltas ni sobreprecios.</p>
           </div>
           <div className="text-center space-y-3">
-            <div className="coin-icon opacity-0 transition-opacity duration-1000 w-16 h-16 rounded-full bg-accent/10 flex items-center justify-center mx-auto">
+            <div className="coin-icon opacity-0 transition-opacity duration-300 w-16 h-16 rounded-full bg-accent/10 flex items-center justify-center mx-auto">
               <Star className="h-8 w-8 text-accent" />
             </div>
             <h3 className="text-lg font-semibold">Precios Claros</h3>
             <p className="text-sm text-muted-foreground text-pretty">Valores reales, acordes a la calidad del producto.</p>
           </div>
-         {/*  <div className="text-center space-y-3">
+          <div className="text-center space-y-3">
             <div className="coin-icon opacity-0 transition-opacity duration-300 w-16 h-16 rounded-full bg-primary/10 flex items-center justify-center mx-auto">
               <CheckCircle className="h-8 w-8 text-primary" />
             </div>
@@ -55,7 +55,7 @@ export default function BenefitsSection() {
             </div>
             <h3 className="text-lg font-semibold">Trabajo Responsable</h3>
             <p className="text-sm text-muted-foreground text-pretty">Cuidamos tus equipos como si fueran nuestros.</p>
-          </div> */}
+          </div>
         </div>
       </div>
     </section>
