@@ -1,73 +1,131 @@
-# React + TypeScript + Vite
+# Catálogo Gamer - Frontend
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Sitio web profesional para Doctor PC, especialista en reparación y mantenimiento de computadoras, notebooks, consolas y PC Gamer.
 
-Currently, two official plugins are available:
+## Tecnologías
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) (or [oxc](https://oxc.rs) when used in [rolldown-vite](https://vite.dev/guide/rolldown)) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+- **React 19** - Biblioteca de UI
+- **TypeScript** - Tipado estático
+- **Vite** - Build tool y dev server
+- **Tailwind CSS v4** - Framework de estilos
+- **React Router DOM** - Navegación entre páginas
+- **Lucide React** - Iconos
+- **Strapi** - CMS headless (backend)
 
-## React Compiler
+## Características
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+- Diseño responsive y moderno con tema dark
+- Catálogo de productos con paginación
+- Filtrado por categorías
+- Vista detallada de productos con galería de imágenes
+- Integración con WhatsApp para consultas
+- Carrusel de testimonios
+- Animaciones y efectos visuales
+- SEO optimizado
 
-## Expanding the ESLint configuration
+## Prerequisitos
 
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
+- Node.js 18+ y npm
+- Backend de Strapi corriendo en `http://localhost:1337`
 
-```js
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
+## Instalación
 
-      // Remove tseslint.configs.recommended and replace with this
-      tseslint.configs.recommendedTypeChecked,
-      // Alternatively, use this for stricter rules
-      tseslint.configs.strictTypeChecked,
-      // Optionally, add this for stylistic rules
-      tseslint.configs.stylisticTypeChecked,
+```bash
+# Instalar dependencias
+npm install
 
-      // Other configs...
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
+# Configurar variables de entorno
+cp .env.example .env
+
+# Editar .env y configurar la URL de Strapi
+VITE_STRAPI_URL=http://localhost:1337
 ```
 
-You can also install [eslint-plugin-react-x](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom) for React-specific lint rules:
+## Desarrollo
 
-```js
-// eslint.config.js
-import reactX from 'eslint-plugin-react-x'
-import reactDom from 'eslint-plugin-react-dom'
+```bash
+# Iniciar servidor de desarrollo
+npm run dev
 
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
-      // Enable lint rules for React
-      reactX.configs['recommended-typescript'],
-      // Enable lint rules for React DOM
-      reactDom.configs.recommended,
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
+# El sitio estará disponible en http://localhost:5173
 ```
+
+## Build
+
+```bash
+# Crear build de producción
+npm run build
+
+# Preview del build de producción
+npm run preview
+```
+
+## Estructura del Proyecto
+
+```
+src/
+├── assets/          # Imágenes y recursos estáticos
+├── components/      # Componentes React
+│   ├── layout/      # Header, Footer
+│   ├── sections/    # Secciones de la página
+│   └── ui/          # Componentes de UI reutilizables
+├── hooks/           # Custom hooks
+│   ├── useCategories.ts
+│   ├── useProducts.ts
+│   └── useProduct.ts
+├── pages/           # Páginas de la aplicación
+│   ├── HomePage.tsx
+│   └── ProductDetail.tsx
+├── types/           # Tipos de TypeScript
+│   ├── category.ts
+│   ├── product.ts
+│   ├── pagination.ts
+│   └── strapi.ts
+├── App.tsx          # Componente raíz con rutas
+├── main.tsx         # Punto de entrada
+└── index.css        # Estilos globales
+```
+
+## Secciones del Sitio
+
+1. **Hero** - Banner principal con llamado a acción
+2. **Sobre Mí** - Información del técnico y estadísticas
+3. **Servicios** - Servicios ofrecidos
+4. **Productos** - Catálogo de productos con filtros
+5. **Cómo Comprar** - Proceso de compra
+6. **Beneficios** - Ventajas del servicio
+7. **Testimonios** - Reseñas de clientes
+8. **CTA** - Llamado a acción final
+
+## Integración con Backend
+
+El frontend consume la API de Strapi para:
+
+- Obtener listado de productos
+- Filtrar productos por categoría
+- Obtener detalles de un producto
+- Listar categorías disponibles
+
+Todas las peticiones se realizan a través de custom hooks ubicados en `src/hooks/`.
+
+## Variables de Entorno
+
+```env
+VITE_STRAPI_URL=http://localhost:1337
+```
+
+## Scripts Disponibles
+
+- `npm run dev` - Servidor de desarrollo
+- `npm run build` - Build de producción
+- `npm run preview` - Preview del build
+- `npm run lint` - Ejecutar ESLint
+
+## Contacto
+
+Para consultas sobre el sitio web o servicios técnicos:
+- WhatsApp: +54 9 381 539-5778
+
+## Licencia
+
+Privado - Todos los derechos reservados
