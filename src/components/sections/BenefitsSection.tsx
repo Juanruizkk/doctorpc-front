@@ -1,5 +1,5 @@
 import { useEffect } from "react"
-import { Zap, Star, CheckCircle, HardDrive } from "lucide-react"
+import { Zap, Star, } from "lucide-react"
 
 export default function BenefitsSection() {
   useEffect(() => {

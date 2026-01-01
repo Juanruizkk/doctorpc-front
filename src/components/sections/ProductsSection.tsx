@@ -7,18 +7,7 @@ import { Eye } from "lucide-react";
 import { useCategories } from "@/hooks/useCategories";
 import { useProducts } from "@/hooks/useProducts";
 
-import type { StrapiEntity } from "@/types/strapi";
-import type { ProductAttributes } from "@/types/strapi";
-
-import type { Category } from "@/types/category";
-
-interface ProductsSectionProps {
-  whatsappLink: (message: string) => string;
-}
-
-export default function ProductsSection({
-  whatsappLink,
-}: ProductsSectionProps) {
+export default function ProductsSection() {
   const [selectedCategory, setSelectedCategory] = useState<
     string | undefined
   >();

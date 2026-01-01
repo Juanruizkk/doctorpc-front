@@ -33,11 +33,8 @@ const services = [
   },
 ]
 
-interface ServicesSectionProps {
-  whatsappLink: (message: string) => string
-}
 
-export default function ServicesSection({ whatsappLink }: ServicesSectionProps) {
+export default function ServicesSection() {
   return (
     <section id="servicios" className="py-20 px-4 bg-card/80" /* style={{ backgroundColor: "#09073B" }} */>
       <div className="container mx-auto">

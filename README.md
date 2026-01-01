@@ -124,7 +124,7 @@ VITE_STRAPI_URL=http://localhost:1337
 ## Contacto
 
 Para consultas sobre el sitio web o servicios técnicos:
-- WhatsApp: +54 9 381 539-5778
+- WhatsApp: +54 9 381 4452417 - Juan Ruiz Dev
 
 ## Licencia
 

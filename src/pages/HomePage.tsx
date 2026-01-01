@@ -18,8 +18,8 @@ export default function HomePage({ whatsappLink, testimonials }: HomePageProps) 
     <>
       <HeroSection whatsappLink={whatsappLink} />
       <AboutSection />
-      <ServicesSection whatsappLink={whatsappLink} />
-      <ProductsSection whatsappLink={whatsappLink} />
+      <ServicesSection />
+      <ProductsSection />
       <HowToBuySection />
       <BenefitsSection />
       <TestimonialsSection testimonials={testimonials} />
