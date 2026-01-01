@@ -64,7 +64,7 @@ export default function AboutSection() {
 
               <div className="space-y-2 text-center">
                 <AnimatedNumber
-                  value={200}
+                  value={2000}
                   suffix="+"
                   className="text-4xl font-bold text-primary"
                 />
